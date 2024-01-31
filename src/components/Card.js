@@ -12,7 +12,7 @@ function Card(props) {
           src={props.imgSrc}
           className="card-img-top img-thumbnail"
           alt="..."
-          style={{ height: "15rem" }}
+          style={{ height: "15rem", objectFit: "fill" }}
         />
         <div className="card-body">
           <h5 className="card-title">{props.foodName}</h5>
