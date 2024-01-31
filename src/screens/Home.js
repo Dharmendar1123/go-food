@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
-import Carousel from "../components/Carousel";
 
 function Home() {
   const [search, setSearch] = useState("");
@@ -111,7 +110,7 @@ function Home() {
       </div>
 
       <div className="container">
-        {foodCat !== []
+        {foodCat
           ? foodCat.map((data) => {
               return (
                 <div className="row mb-3">
@@ -119,7 +118,7 @@ function Home() {
                     {data.CategoryName}
                   </div>
                   <hr />
-                  {foodItem !== [] ? (
+                  {foodItem ? (
                     foodItem
                       .filter((item) => (item.CategoryName === data.CategoryName)&& (item.name.toLowerCase().includes(search.toLowerCase())))
                       .map((filterItems) => {

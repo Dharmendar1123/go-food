@@ -10,8 +10,9 @@ function Card(props) {
       <div className="card mt-3" style={{ width: "18rem" }}>
         <img
           src={props.imgSrc}
-          className="card-img-top"
+          className="card-img-top img-thumbnail"
           alt="..."
+          style={{ height: "15rem" }}
         />
         <div className="card-body">
           <h5 className="card-title">{props.foodName}</h5>
