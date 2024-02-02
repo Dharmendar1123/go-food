@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://dbGofood:Gofood@gofoodcluster.gjuva5s.mongodb.net/gofooddb?retryWrites=true&w=majority'
+require('dotenv').config({ path: '../.env' });
+const mongoURI = process.env.REACT_APP_MONGO_CONNECTION
 
 const mongoDB = async() => {
     await mongoose.connect(mongoURI)
